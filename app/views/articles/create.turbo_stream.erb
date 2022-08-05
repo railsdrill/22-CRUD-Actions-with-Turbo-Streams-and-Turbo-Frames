@@ -1,0 +1,7 @@
+<%= turbo_stream.prepend "articles" do %>
+<%= render @article %>
+<% end %>
+
+<%= turbo_stream.replace "article_form" do %>
+<%= render "form", article: Article.new %>
+<% end %>
